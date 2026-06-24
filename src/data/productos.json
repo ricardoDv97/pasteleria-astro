@@ -17,18 +17,18 @@
   },
   {
     "id": "torta-3",
-    "nombre": "Marquise de Chocolate y Frutos Rojos",
-    "descripcion": "Base húmeda y densa de chocolate puro (sin harina), colchón de dulce de leche, crema chantilly y una lluvia de frutos rojos frescos.",
+    "nombre": "Postres para mesa dulce",
+    "descripcion": "Postre de Chocotorta con galletitas chocolinas y dulce de leche.",
     "precio": 20000,
-    "categoria": "Tortas Tradicionales",
-    "imagen": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop"
+    "categoria": "Postres",
+    "imagen": "/images/catalogo/postre.webp"
   },
   {
     "id": "torta-4",
-    "nombre": "Lemon Pie Signature",
-    "descripcion": "Masa maza sablée vasca crocante, crema de limón (lemon curd) perfectamente equilibrada entre lo ácido y lo dulce, y copos de merengue dorado.",
+    "nombre": "Lemon Pie",
+    "descripcion": "Base de masa sablee dulce y crocante, rellena con una suave y equilibrada crema de limón casera, coronada con un generoso merengue italiano.",
     "precio": 15000,
     "categoria": "Tartas",
-    "imagen": "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=600&auto=format&fit=crop"
+    "imagen": "/images/catalogo/lemon-pie.webp"
   }
 ]

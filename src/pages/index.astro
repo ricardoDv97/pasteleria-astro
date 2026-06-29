@@ -68,41 +68,41 @@ import productos from '../data/productos.json';
 		</section>
 
 		<section id="nosotros" class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 border-t border-pink-50/60">
-			<div class="bg-gradient-to-br from-pink-50/30 via-white to-amber-50/20 rounded-3xl p-8 sm:p-12 border border-pink-100/40 shadow-sm text-center">
-				<span class="text-xs font-bold uppercase tracking-widest text-pink-500">Conocé nuestra esencia</span>
-				<h2 class="text-3xl font-extrabold text-slate-950 mt-2 mb-6 sm:text-4xl">Nuestra Historia & Compromiso</h2>
+			<div class="relative bg-gradient-to-br from-pink-50/30 via-white to-amber-50/20 rounded-3xl p-8 sm:p-12 border border-pink-100/40 shadow-sm text-center overflow-hidden">
 				
-				<div class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto space-y-4 leading-relaxed">
-					<p>
-						En <strong class="text-pink-600">Dulce Gracia</strong> elaboramos tortas, tartas, lemon pie y dulces artesanales para acompañar tus celebraciones y momentos especiales. Utilizamos ingredientes de calidad y ponemos dedicación en cada preparación para ofrecerte sabor, frescura y una presentación cuidada hasta el último detalle.
-					</p>
-					<p class="font-medium text-slate-800 bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-pink-100/30 inline-block shadow-sm">
-						💖 Cada creación está hecha con amor, inspirada en la gracia de Dios y pensada para endulzar tus momentos más importantes.
-					</p>
+				<div class="max-w-2xl mx-auto z-10 relative">
+					<span class="text-xs font-bold uppercase tracking-widest text-pink-500">Conocé nuestra esencia</span>
+					<h2 class="text-3xl font-extrabold text-slate-950 mt-2 mb-6 sm:text-4xl">Nuestra Historia & Compromiso</h2>
+					
+					<div class="text-slate-600 text-base sm:text-lg space-y-4 leading-relaxed">
+						<p>
+							En <strong class="text-pink-600">Dulce Gracia</strong> elaboramos tortas, tartas, lemon pie y dulces artesanales para acompañar tus celebraciones y momentos especiales. Utilizamos ingredientes de calidad y ponemos dedicación en cada preparación para ofrecerte sabor, frescura y una presentación cuidada hasta el último detalle.
+						</p>
+						<p class="font-medium text-slate-800 bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-pink-100/30 inline-block shadow-sm">
+							💖 Cada creación está hecha con amor, inspirada en la gracia de Dios y pensada para endulzar tus momentos más importantes.
+						</p>
+					</div>
 				</div>
 
-				<div class="mt-8 flex flex-col items-center justify-center gap-3">
-					<div class="flex items-center gap-1.5 text-amber-400 drop-shadow-sm">
+				<div class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-44 lg:w-52 opacity-90 pointer-events-none">
+					<img 
+						src="/animada.webp" 
+						alt="Mascota Repostera Dulce Gracia" 
+						class="w-full h-auto object-contain"
+					/>
+				</div>
+
+				<div class="mt-8 flex flex-col items-center justify-center gap-2 relative z-10">
+					<div class="flex items-center gap-1 text-amber-400 drop-shadow-sm">
 						{[...Array(5)].map((_, i) => (
-							<>
-								{/* Espacio reservado para la imagen de la chef en la 3era posición (index 2) */}
-								{i === 2 && (
-									<img 
-										src="/animada.webp" 
-										alt="Chef Dulce Gracia" 
-										class="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-									/>
-								)}
-								
-								<svg 
-									class={`w-6 h-6 fill-current transition-transform duration-300 hover:scale-125`} 
-									style={`animation-delay: ${i * 150}ms`}
-									viewBox="0 0 24 24" 
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-								</svg>
-							</>
+							<svg 
+								class={`w-6 h-6 fill-current transition-transform duration-300 hover:scale-125`} 
+								style={`animation-delay: ${i * 150}ms`}
+								viewBox="0 0 24 24" 
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+							</svg>
 						))}
 					</div>
 					<span class="text-xs font-semibold uppercase tracking-wider text-amber-600/80 mt-1">Calidad de Excelencia de 5 Estrellas</span>

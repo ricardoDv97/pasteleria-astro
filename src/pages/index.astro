@@ -7,11 +7,9 @@ import productos from '../data/productos.json';
 ---
 
 <Layout title="Dulce Gracia | Tortas y Tartas de Diseño">
-	<!-- Navegación superior -->
 	<Navbar />
 
 	<main class="bg-[#FFFDFB]">
-		<!-- Hero Section -->
 		<section id="inicio" class="relative overflow-hidden bg-gradient-to-tr from-pink-50 via-amber-50/30 to-white py-12 px-4 sm:px-6 lg:px-8">
 			<div class="mx-auto max-w-4xl text-center">
 				<span class="inline-flex items-center rounded-full bg-pink-50 px-3 py-1 text-sm font-medium text-pink-600 ring-1 ring-inset ring-pink-500/10 mb-3">
@@ -27,19 +25,16 @@ import productos from '../data/productos.json';
 			</div>
 		</section>
 
-		<!-- Catálogo Dinámico -->
 		<section id="catalogo" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-pink-50">
 			<div class="text-center mb-12">
 				<h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Nuestro Catálogo Exclusivo</h2>
 				<p class="mt-3 text-lg text-slate-500">Artesanías dulces preparadas minuciosamente para ti.</p>
 			</div>
 
-			<!-- Grid de Tarjetas -->
 			<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 				{productos.map((producto) => (
 					<div class="group relative flex flex-col justify-between bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl hover:shadow-pink-100/50 transition-all duration-300 border border-pink-50/50">
 						<div>
-							<!-- Contenedor de Imagen -->
 							<div class="w-full h-48 overflow-hidden rounded-2xl bg-slate-100 group-hover:opacity-95 transition-opacity duration-300">
 								<img 
 									src={producto.imagen} 
@@ -48,7 +43,6 @@ import productos from '../data/productos.json';
 								/>
 							</div>
 							
-							<!-- Detalles del Producto -->
 							<div class="mt-4 flex justify-between items-start">
 								<div>
 									<span class="text-xs font-semibold uppercase tracking-wider text-pink-500">{producto.categoria}</span>
@@ -58,7 +52,6 @@ import productos from '../data/productos.json';
 							<p class="mt-2 text-sm text-slate-500 line-clamp-3">{producto.descripcion}</p>
 						</div>
 
-						<!-- Botón de Acción a WhatsApp -->
 						<div class="mt-5">
 							<a
 								href={`https://wa.me/543765380766?text=${encodeURIComponent(`¡Hola! Me gustaría consultar disponibilidad y presupuesto para el producto: ${producto.nombre}`)}`}
@@ -74,7 +67,6 @@ import productos from '../data/productos.json';
 			</div>
 		</section>
 
-		<!-- Sección Nosotros -->
 		<section id="nosotros" class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 border-t border-pink-50/60">
 			<div class="bg-gradient-to-br from-pink-50/30 via-white to-amber-50/20 rounded-3xl p-8 sm:p-12 border border-pink-100/40 shadow-sm text-center">
 				<span class="text-xs font-bold uppercase tracking-widest text-pink-500">Conocé nuestra esencia</span>
@@ -89,18 +81,28 @@ import productos from '../data/productos.json';
 					</p>
 				</div>
 
-				<!-- Calificación de 5 Estrellas Doradas -->
-				<div class="mt-8 flex flex-col items-center justify-center gap-2">
-					<div class="flex items-center gap-1 text-amber-400 drop-shadow-sm">
+				<div class="mt-8 flex flex-col items-center justify-center gap-3">
+					<div class="flex items-center gap-1.5 text-amber-400 drop-shadow-sm">
 						{[...Array(5)].map((_, i) => (
-							<svg 
-								class={`w-6 h-6 fill-current transition-transform duration-300 hover:scale-125`} 
-								style={`animation-delay: ${i * 150}ms`}
-								viewBox="0 0 24 24" 
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-							</svg>
+							<>
+								{/* Espacio reservado para la imagen de la chef en la 3era posición (index 2) */}
+								{i === 2 && (
+									<img 
+										src="/image_13.png" 
+										alt="Chef Dulce Gracia" 
+										class="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+									/>
+								)}
+								
+								<svg 
+									class={`w-6 h-6 fill-current transition-transform duration-300 hover:scale-125`} 
+									style={`animation-delay: ${i * 150}ms`}
+									viewBox="0 0 24 24" 
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+								</svg>
+							</>
 						))}
 					</div>
 					<span class="text-xs font-semibold uppercase tracking-wider text-amber-600/80 mt-1">Calidad de Excelencia de 5 Estrellas</span>
@@ -109,6 +111,5 @@ import productos from '../data/productos.json';
 		</section>
 	</main>
 
-	<!-- Pie de página -->
 	<Footer />
 </Layout>
